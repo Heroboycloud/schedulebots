@@ -14,7 +14,7 @@ app = Flask(__name__)
 @app.route('/joke')
 def hello_world():
     url= "https://v2.jokeapi.dev/joke/Any?format=txt"
-    channel_id= ""
+    channel_id= os.environ.get('channel_id')
     joke= requests.get(url).text
     bot.send_message(channel_id,joke)
     return joke
