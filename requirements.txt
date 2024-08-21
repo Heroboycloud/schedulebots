@@ -3,3 +3,4 @@ gunicorn
 telebot
 schedule
 requests
+faker
