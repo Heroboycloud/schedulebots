@@ -21,7 +21,7 @@ def hello_world():
     headers= {"user-agent":fake.user_agent()}
     joke= requests.get(url,headers=headers).text
     joke_1= util.message.format(title,joke)
-    bot.send_message(channel_id,joke_1,parse_mode="MarkdownV2")
+    bot.send_message(channel_id,joke_1,parse_mode="Markdown")
     return joke
 
 @app.route('/chuck_norris')
@@ -32,5 +32,5 @@ def chuck():
     headers= {"user-agent":fake.user_agent()}
     joke= requests.get(url,headers=headers).json()
     joke_1= util.message.format(title,joke["value"])
-    bot.send_message(channel_id,joke_1,parse_mode="MarkdownV2")
+    bot.send_message(channel_id,joke_1,parse_mode="Markdown")
     return joke
