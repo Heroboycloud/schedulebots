@@ -2,7 +2,7 @@
 
 message= '''
 *** Daily Dose of laughter🤣🤣🤣 ***
-==================================
+
 **Joke of the day**
 *{0}*
 
