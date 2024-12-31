@@ -13,8 +13,12 @@ fake= Faker()
 
 app = Flask(__name__)
 
-@app.route('/joke')
+@app.route('/')
 def hello_world():
+    return "<h1>Hi, Welcome to Schedulebot site</h1> "
+
+@app.route('/joke')
+def joje_world():
     title= "Daily Dose of Jokes"
     url= "https://v2.jokeapi.dev/joke/Any?format=txt"
     channel_id= os.environ.get('channel_id')
