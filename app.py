@@ -46,6 +46,7 @@ def chuck():
 @app.route('/pro_joke')
 def program_joke():
     title= "Daily Dose of Jokes"
+    channel_id= os.environ.get('channel_id')
     joke= pyjokes.get_joke()
     joke_1= util.message.format(title,joke)
     bot.send_message(channel_id,joke_1,parse_mode="Markdown")
