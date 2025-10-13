@@ -4,7 +4,7 @@ from faker import Faker
 import telebot,time
 from telebot import types
 import util
-import pyjoke
+import pyjokes
 
 Token= os.environ.get('Token')
 bot= telebot.TeleBot(Token)
@@ -49,4 +49,4 @@ def joje_world():
     joke= pyjokes.get_joke()
     joke_1= util.message.format(title,joke)
     bot.send_message(channel_id,joke_1,parse_mode="Markdown")
-    return joke
+    return joke_
