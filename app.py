@@ -44,9 +44,9 @@ def chuck():
 
 
 @app.route('/pro_joke')
-def joje_world():                                              title= "Daily Dose of Jokes"
+def joje_world():
+    title= "Daily Dose of Jokes"
     joke= pyjokes.get_joke()
     joke_1= util.message.format(title,joke)
-    bot.send_message(channel_id,joke_1,parse_mode="Markdown
-")
+    bot.send_message(channel_id,joke_1,parse_mode="Markdown")
     return joke
