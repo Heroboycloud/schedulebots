@@ -49,4 +49,4 @@ def joje_world():
     joke= pyjokes.get_joke()
     joke_1= util.message.format(title,joke)
     bot.send_message(channel_id,joke_1,parse_mode="Markdown")
-    return joke_
+    return joke
