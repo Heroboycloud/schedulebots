@@ -44,7 +44,7 @@ def chuck():
 
 
 @app.route('/pro_joke')
-def joje_world():
+def program_joke():
     title= "Daily Dose of Jokes"
     joke= pyjokes.get_joke()
     joke_1= util.message.format(title,joke)
