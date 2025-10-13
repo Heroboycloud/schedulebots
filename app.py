@@ -4,6 +4,7 @@ from faker import Faker
 import telebot,time
 from telebot import types
 import util
+import pyjoke
 
 Token= os.environ.get('Token')
 bot= telebot.TeleBot(Token)
@@ -15,7 +16,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return "<h1>Hi, Welcome to Schedulebot site</h1> "
+    return "<h1>Hi, Welcome to Schedulebot site</h1><p>Here is a free joke {pyjokes.get_joke()}</p> "
 
 @app.route('/joke')
 def joje_world():
@@ -37,4 +38,15 @@ def chuck():
     joke= requests.get(url,headers=headers).json()
     joke_1= util.message.format(title,joke["value"])
     bot.send_message(channel_id,joke_1,parse_mode="Markdown")
+    return joke
+
+
+
+
+@app.route('/pro_joke')
+def joje_world():                                              title= "Daily Dose of Jokes"
+    joke= pyjokes.get_joke()
+    joke_1= util.message.format(title,joke)
+    bot.send_message(channel_id,joke_1,parse_mode="Markdown
+")
     return joke
