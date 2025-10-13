@@ -4,4 +4,4 @@ telebot
 schedule
 requests
 faker
-pyjoke
+pyjokes
