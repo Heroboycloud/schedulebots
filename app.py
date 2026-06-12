@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return "<h1>Hi, Welcome to Schedulebot site</h1><p>Here is a free joke {pyjokes.get_joke()}</p> "
+    return f"<h1>Hi, Welcome to Schedulebot site</h1><p>Here is a free joke {pyjokes.get_joke()}</p> "
 
 @app.route('/joke')
 def joje_world():
